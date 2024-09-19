@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config: Config = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,12 +10,76 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+
+        background_body: "var(--background-body)",
+        suggestions_bar: "var(--suggestions-bar)",
+        feedback_title: "var(--feedback-title)",
+        feedback_tag: "var(--feedback-tag)",
+        feedback_paragraph: "var(--feedback-paragraph)",
+        feedback_upvote: "var(--feedback-upvote)",
+        feedback_tag_card: "var(--feedback-tag-card)",
+        feedback_tag_card_hover: "var(--feedback-tag-card-hover)",
+        add_feedback_button: "var(--add-feedback-button)",
+        add_feedback_button_hover: "var(--add-feedback-button-hover)",
+        delete_feedback_button: "var(--delete-feedback-button)",
+        delete_feedback_button_hover: "var(--delete-feedback-button-hover)",
+        edit_feedback_button_hover: "var(--edit-feedback-button-hover)",
+        header_faded: "var(--header-faded)",
+        list_orange: "var(--list-orange)",
+        list_cyan: "var(--list-cyan)",
+        roadmap_items_not_checked: "var(--roadmap-items-not-checked)",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;
