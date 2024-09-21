@@ -3,9 +3,9 @@ import SuggestionsIcon from "@/public/assets/suggestions/icon-suggestions.svg";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
-export const SuggestionsBar = () => {
+const SuggestionsBar = () => {
   return (
-    <div className="flex h-14 items-center justify-between bg-suggestions-bar px-6">
+    <div className="flex h-14 items-center justify-between bg-suggestions-bar px-6 sm:h-[4.5rem] sm:rounded-[0.63rem] sm:pl-6 sm:pr-3">
       <div className="flex items-center gap-[2.375rem]">
         <div className="hidden items-center gap-4 sm:flex">
           <Image
@@ -25,9 +25,10 @@ export const SuggestionsBar = () => {
           </div>
         </div>
       </div>
-      <Button className="body-3 h-10 bg-add-feedback-button px-4 font-bold text-white-2">
+      <Button className="body-3 h-10 bg-purple px-4 font-bold text-white-2 hover:bg-purple-hover">
         + Add Feedback
       </Button>
     </div>
   );
 };
+export default SuggestionsBar;

@@ -58,17 +58,17 @@ body {
     --suggestions-bar: #373f68;
     --feedback-title: #3a4374;
     --feedback-paragraph: #647196;
-    --feedback-tag: #4661e6;
+    --blue: #4661e6;
     --white-2: #f2f4fe;
-    --feedback-tag-card-hover: #cfd7ff;
-    --add-feedback-button: #ad1fea;
-    --add-feedback-button-hover: #c75af6;
+    --blue-card-hover: #cfd7ff;
+    --purple: #ad1fea;
+    --purple-hover: #c75af6;
     --delete-feedback-button: #d73737;
     --delete-feedback-button-hover: #e98888;
     --edit-feedback-button-hover: #7c91f9;
     --header-faded: #dcdefc;
-    --list-orange: #f49f85;
-    --list-cyan: #62bcfa;
+    --orange: #f49f85;
+    --cyan: #62bcfa;
     --roadmap-items-not-checked: #abb0c7;
   }
   .dark {

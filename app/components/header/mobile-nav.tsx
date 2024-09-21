@@ -1,7 +1,7 @@
 import HamburgerMenuIcon from "@/public/assets/shared/mobile/icon-hamburger.svg";
 import Image from "next/image";
 
-export default function MobileNav() {
+const MobileNav = () => {
   return (
     <div className="flex h-[4.5rem] items-center justify-between bg-gradient-to-r from-[#28A7ED] via-[#A337F6] to-[#E84D70] px-6 sm:hidden">
       <div className="flex items-center justify-between">
@@ -13,4 +13,6 @@ export default function MobileNav() {
       <Image src={HamburgerMenuIcon} alt="Hamburger Menu Icon"></Image>
     </div>
   );
-}
+};
+
+export default MobileNav;
