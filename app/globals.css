@@ -52,15 +52,14 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 0.63rem;
 
-    --background-body: #f2f4ff;
+    --white-1: #f2f4ff;
     --suggestions-bar: #373f68;
     --feedback-title: #3a4374;
     --feedback-paragraph: #647196;
     --feedback-tag: #4661e6;
-    --feedback-tag-card: #f2f4ff;
-    --feedback-upvote: #f2f4fe;
+    --white-2: #f2f4fe;
     --feedback-tag-card-hover: #cfd7ff;
     --add-feedback-button: #ad1fea;
     --add-feedback-button-hover: #c75af6;
