@@ -17,8 +17,8 @@ const CategoryCard = () => {
           return (
             <Toggle
               className={cn(
-                "body-3 rounded-[0.63rem] bg-white-1 px-4 py-1 text-blue",
-                category.isActive && "bg-blue text-white"
+                "body-3 rounded-[0.63rem] bg-white-1 px-4 py-1 text-blue hover:bg-blue-card-hover",
+                category.isActive && "bg-blue text-white hover:bg-blue"
               )}
               key={index}
             >
