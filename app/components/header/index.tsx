@@ -1,8 +1,8 @@
-import CategoryCard from "./category-card";
-import GradientCard from "./gradient-card";
-import MobileNav from "./mobile-nav";
-import RoadmapCard from "./roadmap-card";
-import SuggestionsBar from "./suggestions-bar";
+import CategoryCard from "./CategoryCard";
+import GradientCard from "./GradientCard";
+import MobileNav from "./MobileNav";
+import RoadmapCard from "./RoadmapCard";
+import SuggestionsBar from "./SuggestionsBar";
 
 export default function Header() {
   return (
