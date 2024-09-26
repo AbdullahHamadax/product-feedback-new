@@ -12,7 +12,7 @@ const CategoryCard = () => {
   ];
   return (
     <div className="flex-1 rounded-[0.63rem] bg-white p-6 text-center lg:flex-initial">
-      <div className="flex flex-wrap sm:gap-x-1 sm:gap-y-2 md:gap-x-2 md:gap-y-4 ">
+      <div className="flex flex-wrap gap-x-2 gap-y-3.5 md:gap-x-2 md:gap-y-4 ">
         {categories.map((category, index) => {
           return (
             <Toggle

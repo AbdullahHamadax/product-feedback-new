@@ -18,7 +18,7 @@ const feedbackItems = [
 ];
 const NotEmpty = () => {
   return (
-    <div className="mt-6 flex flex-col gap-4 lg:gap-5">
+    <div className="mt-6 flex flex-col gap-4 px-6 sm:px-0 lg:gap-5">
       {feedbackItems.map((item, index) => {
         return (
           <FeedbackItem
