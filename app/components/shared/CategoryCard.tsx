@@ -11,7 +11,7 @@ const CategoryCard = () => {
     { name: "Feature", isActive: false },
   ];
   return (
-    <div className="h-[11.13rem]  flex-1 rounded-[0.63rem] bg-white pb-3 pl-6 pr-3 pt-6 text-center">
+    <div className="flex-1 rounded-[0.63rem] bg-white p-6 text-center lg:flex-initial">
       <div className="flex flex-wrap sm:gap-x-1 sm:gap-y-2 md:gap-x-2 md:gap-y-4 ">
         {categories.map((category, index) => {
           return (

@@ -1,6 +1,6 @@
-const CategoryCard = () => {
+const RoadmapCard = () => {
   return (
-    <div className="flex h-[11.13rem]  flex-1 flex-col gap-6 rounded-[0.63rem] bg-white px-6 pt-[1.125rem]">
+    <div className="flex flex-1 flex-col gap-6 rounded-[0.63rem] bg-white p-6 pt-[1.125rem] lg:flex-initial">
       <div className="flex items-center justify-between">
         <h3 className="text-feedback-title">Roadmap</h3>
         <p className="body-3 text-blue hover:underline">View</p>
@@ -32,4 +32,4 @@ const CategoryCard = () => {
   );
 };
 
-export default CategoryCard;
+export default RoadmapCard;
