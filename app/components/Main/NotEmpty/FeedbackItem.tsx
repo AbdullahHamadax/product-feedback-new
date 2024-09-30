@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Category } from "@/lib/types";
 import { ChevronUp, MessageCircle } from "lucide-react";
+import Link from "next/link";
 const FeedbackItem = ({
   upvotes,
   title,
@@ -15,7 +16,7 @@ const FeedbackItem = ({
   category: Category;
 }) => {
   return (
-    <div className="body-3 flex items-start gap-10 rounded-[0.63rem] bg-white p-6 font-bold">
+    <div className="body-3 flex items-start rounded-[0.63rem] bg-white p-6 font-bold sm:gap-10">
       <Button className="body-3 group hidden h-[3.313rem] flex-col items-center gap-1 rounded-[0.63rem] bg-white-1 px-2 text-feedback-title shadow-none hover:bg-blue-card-hover active:bg-blue active:text-white sm:flex">
         <ChevronUp
           className="h-4 text-blue transition group-active:text-white"
@@ -37,24 +38,28 @@ const FeedbackItem = ({
             />
             <p>{upvotes}</p>
           </Button>
-          <div className="flex  items-center gap-1">
-            <MessageCircle
-              fill="#C5C8DE"
-              className="size-6 opacity-60"
-              strokeWidth={0}
-            />
-            <p className="text-feedback-title">{comments.length}</p>
-          </div>
+          <Link href={`/feedback/${1}`}>
+            <div className="flex cursor-pointer items-center gap-1">
+              <MessageCircle
+                fill="#C5C8DE"
+                className="size-6 opacity-60"
+                strokeWidth={0}
+              />
+              <p className="text-feedback-title">{comments.length}</p>
+            </div>
+          </Link>
         </div>
       </div>
-      <div className="hidden items-center gap-1 self-center sm:flex">
-        <MessageCircle
-          fill="#C5C8DE"
-          className="size-6 opacity-60"
-          strokeWidth={0}
-        />
-        <p className="text-feedback-title">{comments.length}</p>
-      </div>
+      <Link href={`/feedback/${1}`} className="self-center">
+        <div className="hidden items-center gap-1 self-center sm:flex">
+          <MessageCircle
+            fill="#C5C8DE"
+            className="size-6 opacity-60"
+            strokeWidth={0}
+          />
+          <p className="text-feedback-title">{comments.length}</p>
+        </div>
+      </Link>
     </div>
   );
 };
