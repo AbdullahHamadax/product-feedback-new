@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import SuggestionsIcon from "@/public/assets/suggestions/icon-suggestions.svg";
 import { Check, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   DropdownMenu,
@@ -112,9 +113,11 @@ const SuggestionsBar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <Button className="body-3 h-10 bg-purple px-4 font-bold text-white-2 hover:bg-purple-hover">
-        + Add Feedback
-      </Button>
+      <Link href={"/feedback-form"}>
+        <Button className="body-3 h-10 bg-purple px-4 font-bold text-white-2 hover:bg-purple-hover">
+          + Add Feedback
+        </Button>
+      </Link>
     </div>
   );
 };

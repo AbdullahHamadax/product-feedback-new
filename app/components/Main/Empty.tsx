@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import DetectiveIcon from "@/public/assets/suggestions/illustration-empty.svg";
 import Image from "next/image";
+import Link from "next/link";
 const Empty = () => {
   return (
-    <div className="px-6 py-8 sm:px-10 sm:py-6">
+    <div className="mx-6 my-8 sm:mx-0 ">
       <div className="flex flex-col items-center rounded-[0.63rem] bg-white px-6 py-[4.75rem] sm:py-[6.875rem]">
         <Image
           src={DetectiveIcon}
@@ -17,9 +18,11 @@ const Empty = () => {
           Got a suggestion? Found a bug that needs to be squashed? We love
           hearing about new ideas to improve our app.
         </p>
-        <Button className="body-3 h-10 bg-purple px-4 font-bold text-white-2 hover:bg-purple-hover">
-          + Add Feedback
-        </Button>
+        <Link href={"/feedback-form"}>
+          <Button className="body-3 h-10 bg-purple px-4 font-bold text-white-2 hover:bg-purple-hover">
+            + Add Feedback
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -1,13 +1,14 @@
+import { cn } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
-
-const GoBackButton = () => {
+import Link from "next/link";
+const GoBackButton = ({ className }: { className?: string }) => {
   return (
-    <div className="flex items-center gap-4 ">
+    <Link className={cn("flex items-center gap-4", className)} href={"/"}>
       <ChevronLeft className="text-blue" size={20} strokeWidth={3} />
-      <p className="body-3 cursor-pointer text-feedback-paragraph hover:underline">
+      <p className="body-3 cursor-pointer font-bold text-feedback-paragraph hover:underline">
         Go Back
       </p>
-    </div>
+    </Link>
   );
 };
 
