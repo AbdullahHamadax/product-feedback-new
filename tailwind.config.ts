@@ -58,6 +58,7 @@ const config: Config = {
         "white-1": "var(--white-1)",
         "suggestions-bar": "var(--suggestions-bar)",
         "feedback-title": "var(--feedback-title)",
+        "cancel-button-hover": "var(--cancel-button-hover)",
         blue: "var(--blue)",
         "feedback-paragraph": "var(--feedback-paragraph)",
         "white-2": "var(--white-2)",
