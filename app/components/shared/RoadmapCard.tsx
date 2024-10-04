@@ -1,9 +1,15 @@
+import Link from "next/link";
+
 const RoadmapCard = () => {
   return (
     <div className="flex flex-1 flex-col gap-6 rounded-[0.63rem] bg-white p-6 pt-[1.125rem] lg:flex-initial">
       <div className="flex items-center justify-between">
         <h3 className="text-feedback-title">Roadmap</h3>
-        <p className="body-3 cursor-pointer text-blue hover:underline">View</p>
+        <Link href={"/roadmap"}>
+          <p className="body-3 cursor-pointer text-blue hover:underline">
+            View
+          </p>
+        </Link>
       </div>
       <ul className="flex flex-col">
         <li className="body-1 flex items-center justify-between text-feedback-paragraph">

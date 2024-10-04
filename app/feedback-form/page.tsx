@@ -8,18 +8,18 @@ import {
   SelectItem,
   SelectSeparator,
   SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import NewFeedbackIcon from "@/public/assets/shared/icon-new-feedback.svg";
-import { Check, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import GoBackButton from "../feedback/[id]/components/GoBackButton";
 const FeedbackForm = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [sortBy, setSortBy] = useState("feature");
   return (
     <div className="container mx-auto flex flex-col items-center px-6 py-[2.125rem]">
       <div>
@@ -52,10 +52,8 @@ const FeedbackForm = () => {
                 </p>
               </div>
               <Select onOpenChange={setIsOpen} open={isOpen}>
-                <SelectTrigger className="flex h-12 w-full items-center justify-between rounded-[0.31rem] bg-white-1 px-4">
-                  <p className="body-3 font-normal text-feedback-title">
-                    Feature
-                  </p>
+                <SelectTrigger className="h-12 rounded-[0.31rem] bg-white-2 ">
+                  <SelectValue placeholder="Feature" />
                   <ChevronDown
                     className={cn(
                       "h-4 transition text-blue",
@@ -63,83 +61,17 @@ const FeedbackForm = () => {
                     )}
                   />
                 </SelectTrigger>
-                <SelectContent className="body-1 ml-[5.5rem] mt-[2.625rem] w-64 rounded-[0.63rem] text-feedback-paragraph">
+                <SelectContent>
                   <SelectGroup>
-                    <SelectItem
-                      value="feature"
-                      className="flex justify-between px-6"
-                      onClick={() => setSortBy("feature")}
-                    >
-                      <p>Feature</p>
-                      <Check
-                        size={18}
-                        className={cn(
-                          "hidden text-purple",
-                          sortBy === "feature" && "flex"
-                        )}
-                      />
-                    </SelectItem>
+                    <SelectItem value="feature">Feature</SelectItem>
                     <SelectSeparator />
-                    <SelectItem
-                      value="ui"
-                      className="flex justify-between px-6"
-                      onClick={() => setSortBy("ui")}
-                    >
-                      <p>UI</p>
-                      <Check
-                        size={18}
-                        className={cn(
-                          "hidden text-purple",
-                          sortBy === "ui" && "flex"
-                        )}
-                      />
-                    </SelectItem>
+                    <SelectItem value="ui">UI</SelectItem>
                     <SelectSeparator />
-                    <SelectItem
-                      value="ux"
-                      className="flex justify-between px-6"
-                      onClick={() => setSortBy("ux")}
-                    >
-                      <p>UX</p>
-                      <Check
-                        size={18}
-                        className={cn(
-                          "hidden text-purple",
-                          sortBy === "ux" && "flex"
-                        )}
-                      />
-                    </SelectItem>
+                    <SelectItem value="ux">UX</SelectItem>
                     <SelectSeparator />
-                    <SelectItem
-                      value="enhancement"
-                      className="flex justify-between px-6"
-                      onClick={() => setSortBy("enhancement")}
-                    >
-                      <p>Enhancement</p>
-                      <Check
-                        size={18}
-                        className={cn(
-                          "hidden text-purple",
-                          sortBy === "enhancement" && "flex"
-                        )}
-                      />
-                    </SelectItem>
+                    <SelectItem value="enhancement">Ehancement</SelectItem>
                     <SelectSeparator />
-
-                    <SelectItem
-                      value="bug"
-                      className="flex justify-between px-6"
-                      onClick={() => setSortBy("bug")}
-                    >
-                      <p>Bug</p>
-                      <Check
-                        size={18}
-                        className={cn(
-                          "hidden text-purple",
-                          sortBy === "bug" && "flex"
-                        )}
-                      />
-                    </SelectItem>
+                    <SelectItem value="bug">Bug</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
