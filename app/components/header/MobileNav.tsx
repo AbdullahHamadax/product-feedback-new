@@ -12,16 +12,16 @@ const MobileNav = () => {
     <div className="flex h-[4.5rem] items-center justify-between bg-gradient-to-r from-[#28A7ED] via-[#A337F6] to-[#E84D70] px-6 sm:hidden">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <p className="body-2 font-bold">Frontend Mentor</p>
+          <p className="body-2 font-bold text-white">Frontend Mentor</p>
           <p className="body-3 text-[#D5DEFB]">Feedback Board</p>
         </div>
       </div>
       <Sheet onOpenChange={setIsOpen} open={isOpen}>
         <SheetTrigger>
           {isOpen ? (
-            <X size={24} strokeWidth={3} />
+            <X size={24} strokeWidth={3} className="text-white" />
           ) : (
-            <Menu size={24} strokeWidth={3} />
+            <Menu size={24} strokeWidth={3} className="text-white" />
           )}
         </SheetTrigger>
         <SheetContent className="mt-[4.5rem] bg-white-1">
