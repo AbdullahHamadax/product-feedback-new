@@ -21,7 +21,7 @@ import GoBackButton from "../feedback/[id]/components/GoBackButton";
 const FeedbackForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="container mx-auto flex flex-col items-center px-6 py-[2.125rem]">
+    <div className="container mx-auto flex h-svh flex-col items-center px-6 py-[2.125rem]">
       <div>
         <GoBackButton className="mb-[2.188rem]" />
 

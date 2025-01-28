@@ -23,16 +23,17 @@ const EditFeedback = () => {
   const [selectTwoIsOpen, setselectTwoIsOpen] = useState(false);
 
   return (
-    <div className="container mx-auto flex flex-col items-center px-6 py-[2.125rem]">
-      <div>
+    <div className="flex h-svh flex-col items-center px-6 py-[2.125rem]">
+      <div className="w-full max-w-[33.75rem]">
         <GoBackButton className="mb-[2.188rem]" />
-
-        <div className="relative flex max-w-[33.75rem] flex-col gap-6 rounded-[0.63rem] bg-white px-6 sm:px-[2.625rem]">
-          <Image
-            src={EditFeedbackIcon}
-            alt="new feedback"
-            className="absolute left-5 top-[-20px] z-50 size-10 sm:left-9"
-          />
+      </div>
+      <div className="relative h-[90%] max-w-[33.75rem]">
+        <Image
+          src={EditFeedbackIcon}
+          alt="new feedback"
+          className="absolute left-5 top-[-20px] z-50 size-10 sm:left-9"
+        />
+        <div className="relative flex h-full flex-col gap-6 overflow-scroll rounded-[0.63rem] bg-white px-6 sm:px-[2.625rem]">
           <h3 className="pt-11 text-feedback-title">Editing &apos;{}&apos;</h3>
           <div>
             <div className="body-3">

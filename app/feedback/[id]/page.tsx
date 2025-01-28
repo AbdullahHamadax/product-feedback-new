@@ -1,6 +1,5 @@
 import FeedbackItem from "@/app/components/Main/NotEmpty/FeedbackItem";
 import { Button } from "@/components/ui/button";
-import { Category } from "@/lib/types";
 import Link from "next/link";
 import AddComment from "./components/AddComment";
 import Comments from "./components/Comments";
@@ -22,7 +21,7 @@ const FeedbackPage = () => {
         comments={[1, 2]}
         title={"Noooo"}
         content={"Yeees"}
-        category={Category.BUG}
+        tag={"Enhancement"}
       />
       <Comments />
       <AddComment />

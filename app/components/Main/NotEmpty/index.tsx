@@ -1,4 +1,3 @@
-import { Category } from "@/lib/types";
 import FeedbackItem from "./FeedbackItem";
 const feedbackItems = [
   {
@@ -6,14 +5,14 @@ const feedbackItems = [
     comments: [1, 2],
     title: "Hi lol",
     content: "fuck Frontend",
-    category: Category.ENHANCEMENT,
+    tag: "Bug",
   },
   {
     upvotes: 0,
     comments: [1],
     title: "Bye lol",
     content: "I love Frontend",
-    category: Category.UI,
+    tag: "UI",
   },
 ];
 const NotEmpty = () => {
@@ -26,7 +25,7 @@ const NotEmpty = () => {
             comments={item.comments}
             title={item.title}
             content={item.content}
-            category={item.category}
+            tag={item.tag}
             key={index}
           />
         );

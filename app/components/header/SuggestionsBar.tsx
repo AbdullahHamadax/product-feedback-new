@@ -13,12 +13,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { feedbackItems } from "@/dummy-data";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const SuggestionsBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [sortBy, setSortBy] = useState("most upvotes");
+  const [sortBy, setSortBy] = useState("Most Upvotes");
 
   return (
     <div className="flex h-14 items-center justify-between bg-suggestions-bar px-6 sm:h-[4.5rem] sm:rounded-[0.63rem] sm:pl-6 sm:pr-3">
@@ -29,7 +30,7 @@ const SuggestionsBar = () => {
             alt="Suggestions"
             className="size-6"
           ></Image>
-          <h3>6 Suggestions</h3>
+          <h3 className="text-white">{feedbackItems.length} Suggestions</h3>
         </div>
         <DropdownMenu onOpenChange={setIsOpen} open={isOpen}>
           <DropdownMenuTrigger>
@@ -43,7 +44,7 @@ const SuggestionsBar = () => {
                 <h4 className="font-normal ">Sort by : </h4>
               </div>
               <div className="flex cursor-pointer items-center">
-                <h4> Most Upvotes</h4>
+                <h4>{sortBy}</h4>
                 <ChevronDown
                   className={cn(
                     "h-4 transition text-white",
@@ -57,56 +58,56 @@ const SuggestionsBar = () => {
           <DropdownMenuContent className="body-1 ml-[5.5rem] mt-[2.625rem] w-64 rounded-[0.63rem] text-feedback-paragraph">
             <DropdownMenuItem
               className="flex justify-between px-6"
-              onClick={() => setSortBy("most upvotes")}
+              onClick={() => setSortBy("Most Upvotes")}
             >
               <p>Most Upvotes</p>
               <Check
                 size={18}
                 className={cn(
                   "hidden text-purple",
-                  sortBy === "most upvotes" && "flex"
+                  sortBy === "Most Upvotes" && "flex"
                 )}
               />
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
               className="flex justify-between px-6"
-              onClick={() => setSortBy("least upvotes")}
+              onClick={() => setSortBy("Least Upvotes")}
             >
               <p>Least Upvotes</p>
               <Check
                 size={18}
                 className={cn(
                   "hidden text-purple",
-                  sortBy === "least upvotes" && "flex"
+                  sortBy === "Least Upvotes" && "flex"
                 )}
               />
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
               className="flex justify-between px-6"
-              onClick={() => setSortBy("most comments")}
+              onClick={() => setSortBy("Most Comments")}
             >
               <p>Most Comments</p>
               <Check
                 size={18}
                 className={cn(
                   "hidden text-purple",
-                  sortBy === "most comments" && "flex"
+                  sortBy === "Most Comments" && "flex"
                 )}
               />
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
               className="flex justify-between px-6"
-              onClick={() => setSortBy("least comments")}
+              onClick={() => setSortBy("Least Comments")}
             >
               <p>Least Comments</p>
               <Check
                 size={18}
                 className={cn(
                   "hidden text-purple",
-                  sortBy === "least comments" && "flex"
+                  sortBy === "Least Comments" && "flex"
                 )}
               />
             </DropdownMenuItem>
